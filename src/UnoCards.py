@@ -5,11 +5,9 @@ class Cards():
         self.type = cardType
 
 
-
-
 class RegularCards(Cards):
 
-    def __init_(self, colour, cardType, cardNumber):
+    def __init__(self, colour, cardType, cardNumber):
         super().__init__(colour, cardType)
         self.cardType = 'regular'
         self.cardNumber = cardNumber
@@ -22,6 +20,7 @@ class PowerCards(Cards):
         self.cardType = 'power'
         self.cardPower = cardPower
 
+
 class WildCards(Cards):
 
     def __init__(self, cardType, colour, cardPower):
@@ -30,4 +29,4 @@ class WildCards(Cards):
         self.colour = None 
         self.cardPower = cardPower
 
-    
+ 
