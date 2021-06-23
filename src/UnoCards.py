@@ -28,3 +28,5 @@ class WildCards(Cards):
         self.cardsType = 'wild'
         self.colour = None 
         self.cardPower = cardPower
+
+ 
