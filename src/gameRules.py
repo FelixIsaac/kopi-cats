@@ -71,7 +71,6 @@ def kopicat():
     
     pass
     
-
     
 #when 1 card left
 def shoutUno():
