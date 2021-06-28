@@ -51,6 +51,27 @@ def wildDraw4():
     pass
 
 
+#kopicat card
+def kopicat():
+    #when a player plays this card, player now referred to as the copycat, will discard cards of identical type
+    #or number as the next few players discarded cards in their turn. the effect of copycat will wear off when it
+    #returns back to their turn. 
+    #i.e. player 1 places kopicat card and becomes 'copycat'. player 2 places a 7, and at the same time copycat 
+    #places a 7 from their deck in player 2's turn. this reoccurs for each other player's turn. 
+
+    #penalty 1: when copycat does not have a card of the same number as the other player, no card will be placed by 
+    #copycat in any of the other player's turns. Additionally, their turn is skipped.
+    #i.e. copycat 'copies' from player 2 and places the same number card. player 3 places a 1, but copycat does not 
+    #have a 1. copycat does not place any card in player 3's turn or any player after that. copycat's turn is then 
+    #skipped.
+    
+    #penalty 2: if the kopicat card is played as the last card, the player will receive one selected card respectively
+    #choesn by the players. 
+    #i.e. player 2 gives a selected card to copycat. this occurs for every player after copycat.
+    
+    pass
+    
+    
 #when 1 card left
 def shoutUno():
     #player must shout uno when they have 1 card.
