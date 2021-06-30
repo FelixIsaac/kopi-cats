@@ -33,7 +33,7 @@ class WildCards(Cards):
 #special cards made by us.
 class SpecialCards(Cards):
     
-    def __init__(self, cardType, colour, cardPower, cardNumber)
+    def __init__(self, cardType, colour, cardPower, cardNumber):
         super().__init__(colour, cardType)
         self.cardType = 'special'
         self.cardPower = cardPower
