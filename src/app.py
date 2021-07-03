@@ -5,7 +5,6 @@ def main():
      
     pygame.init()
     
-    programIcon = pygame.image.load('./assets/kopicat.PNG')
     
     pygame.display.set_icon(programIcon)
     pygame.display.set_caption("Kopi Cat")
