@@ -11,8 +11,9 @@ def main():
     pygame.display.set_caption("Kopi Cat")
 
     screen = pygame.display.set_mode((720,480))
-    card1 = Cards((255,0,0), 'normal')
-    card1.build(screen)
+    
+    prototypeCard = Cards((255,0,0), 'normal')
+    prototypeCard.build(screen)
 
     
 
