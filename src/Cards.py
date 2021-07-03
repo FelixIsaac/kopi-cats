@@ -1,9 +1,11 @@
+from pygame import draw
 class Cards():
 
     def __init__(self, colour, cardType):
         self.colour = colour
         self.type = cardType
-
+    def build(self, surface):
+        draw.rect(surface,self.colour,(100,300,100,300))
 
 class RegularCards(Cards):
 
