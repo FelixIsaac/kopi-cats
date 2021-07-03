@@ -15,8 +15,6 @@ def main():
     prototypeCard = Cards((255,0,0), 'normal')
     prototypeCard.build(screen)
 
-    
-
     isRunning = True
     while isRunning:
         for event in pygame.event.get():
