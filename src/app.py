@@ -1,5 +1,17 @@
 import pygame
 from Cards import Cards
+#shouldn't it be from Cards.py import Cards ? also wouldn't we want to import all the classes?
+
+#reg1 = RegularCards((0,255,0), '1')
+prototypeCard = Cards((255,0,0), 'regular')
+
+def createCards():
+     
+     #should not be hard coded. should be computer decided. but not sure how.
+     prototypeCard.build(screen)
+     #reg1.build(screen)
+     
+    
 
 def main():
      
@@ -11,8 +23,7 @@ def main():
 
     screen = pygame.display.set_mode((720,480))
     
-    prototypeCard = Cards((255,0,0), 'normal')
-    prototypeCard.build(screen)
+    showCards()
 
     isRunning = True
     while isRunning:
