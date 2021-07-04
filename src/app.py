@@ -6,7 +6,6 @@ from Cards import Cards
 prototypeCard = Cards((255,0,0), 'regular')
 
 def createCards():
-     
      #should not be hard coded. should be computer decided. but not sure how.
      prototypeCard.build(screen)
      #reg1.build(screen)
