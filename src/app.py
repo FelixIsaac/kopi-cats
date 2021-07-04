@@ -21,7 +21,7 @@ def main():
 
     screen = pygame.display.set_mode((720,480))
     
-    showCards()
+    createCards()
 
     isRunning = True
     while isRunning:
