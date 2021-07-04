@@ -1,5 +1,5 @@
 import pygame
-from Cards import Cards,red,blue,green,yellow,white,black
+from Cards import Cards, colours
 
 def main():
      
@@ -11,11 +11,12 @@ def main():
 
     screen = pygame.display.set_mode((720,480))
     
-    prototypeCard = Cards(red, 'normal')
+    prototypeCard = Cards(colours["red"], 'normal')
     prototypeCard.build(screen)
 
     isRunning = True
     while isRunning:
+        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 isRunning = False 
