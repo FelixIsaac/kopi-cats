@@ -10,9 +10,8 @@ def createCards():
      #should not be hard coded. should be computer decided. but not sure how.
      prototypeCard.build(screen)
      #reg1.build(screen)
-     
-    
 
+     
 def main():
      
     pygame.init()
