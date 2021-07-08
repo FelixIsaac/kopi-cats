@@ -25,6 +25,12 @@ class RegularCards(Cards):
         super().__init__(colour, cardType)
         self.cardType = 'regular'
         self.cardNumber = cardNumber
+    
+    def build(self, surface):
+        draw.rect(surface,self.colour,(100,300,100,300))
+    
+    #super().build(self, surface):
+    #^ not sure if inheritance can be done this way lol
 
 
 class PowerCards(Cards):
