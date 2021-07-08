@@ -1,5 +1,5 @@
 import pygame
-from Cards import Cards
+from Cards import Cards, colours
 #shouldn't it be from Cards.py import Cards ? also wouldn't we want to import all the classes?
 
 #reg1 = RegularCards((0,255,0), '1')
@@ -21,10 +21,12 @@ def main():
 
     screen = pygame.display.set_mode((720,480))
     
-    createCards()
+    prototypeCard = Cards(colours["red"], 'normal')
+    prototypeCard.build(screen)
 
     isRunning = True
     while isRunning:
+        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 isRunning = False 
