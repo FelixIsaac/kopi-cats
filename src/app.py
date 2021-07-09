@@ -1,7 +1,7 @@
 import pygame
 from Cards import Cards, colours
-#shouldn't it be from Cards.py import Cards ? also wouldn't we want to import all the classes?
 
+"""
 #reg1 = RegularCards((0,255,0), '1')
 prototypeCard = Cards((255,0,0), 'regular')
 
@@ -9,20 +9,21 @@ def createCards():
      #should not be hard coded. should be computer decided. but not sure how.
      prototypeCard.build(screen)
      #reg1.build(screen)
-
+"""
      
 def main():
      
     pygame.init()
     
-    programIcon = pygame.image.load('./assets/kopicaticon.PNG')
+    programIcon = pygame.image.load('../assets/kopicaticon.PNG')
     pygame.display.set_icon(programIcon)
     pygame.display.set_caption("Kopi Cat")
 
     screen = pygame.display.set_mode((720,480))
+    screen.fill((40,0,180))
     
     prototypeCard = Cards(colours["red"], 'normal')
-    prototypeCard.build(screen)
+    prototypeCard.build(screen, (280,180,150,230))
 
     isRunning = True
     while isRunning:

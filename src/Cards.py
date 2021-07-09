@@ -15,8 +15,8 @@ class Cards():
         self.colour = colour
         self.type = cardType
         
-    def build(self, surface):
-        draw.rect(surface,self.colour,(100,300,100,300))
+    def build(self, surface, coordsDimension):
+        draw.rect(surface,self.colour, coordsDimension)
         
 
 class RegularCards(Cards):
