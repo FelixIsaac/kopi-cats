@@ -29,10 +29,6 @@ def main():
                 isRunning = False 
                 pygame.display.quit()
 
-        for event in pygame.event.get():
-            if event.type == pygame.WINDOWMAXIMIZED:
-                pygame.display.init()
-
         screen.fill((40,0,180))
     
         prototypeCard = Cards(colours["red"], 'normal')
