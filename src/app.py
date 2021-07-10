@@ -1,5 +1,4 @@
 import pygame
-from pygame.constants import FULLSCREEN, RESIZABLE
 from Cards import Cards, colours
 
 """
