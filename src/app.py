@@ -18,13 +18,9 @@ def main():
     programIcon = pygame.image.load('../assets/kopicaticon.PNG')
     pygame.display.set_icon(programIcon)
     pygame.display.set_caption("Kopi Cat")
-
-    screen = pygame.display.set_mode((720,480))
-    screen.fill((40,0,180))
     
-    prototypeCard = Cards(colours["red"], 'normal')
-    prototypeCard.build(screen, (280,180,150,230))
-
+    screen = pygame.display.set_mode((720,480), pygame.RESIZABLE)
+    
     isRunning = True
     while isRunning:
         
@@ -32,6 +28,11 @@ def main():
             if event.type == pygame.QUIT:
                 isRunning = False 
                 pygame.display.quit()
+
+        screen.fill((40,0,180))
+    
+        prototypeCard = Cards(colours["red"], 'normal')
+        prototypeCard.build(screen, (280,180,150,230))
 
         pygame.display.update()
 
