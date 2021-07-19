@@ -1,6 +1,5 @@
-from pygame import font, draw
+from pygame import font, draw, display
 from Cards import colours
-from app import screenHeight, screenWidth, screen
 
 class btn():
     def __init__(self, colour, x, y, width, height) -> None:
@@ -11,7 +10,8 @@ class btn():
     def build(self, surface):
         draw.rect(surface, self.colour, (self.position, self.dimensions))
 
-def createMenu():
+
+def createMenu(screenWidth, screenHeight, screen):
     btnWidth = 200
     btnHeight = 75
     btnCentred = (screenWidth/2) - (btnWidth/2)
