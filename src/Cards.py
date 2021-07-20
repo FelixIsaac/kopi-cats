@@ -9,53 +9,46 @@ colours = {
     "black" : (0, 0, 0)
 }
 
-class Cards():
 
-    def __init__(self, colour, cardType):
+class Card():
+
+    def __init__(self, colour):
         self.colour = colour
-        self.type = cardType
         
-    def build(self, surface, coordsDimension):
-        draw.rect(surface,self.colour, coordsDimension)
+    def build(self, surface, x, y, width, height):
+        draw.rect(surface, self.colour, (x, y, width, height))
         
 
-class RegularCards(Cards):
+class RegularCard(Card):
 
-    def __init__(self, colour, cardType, cardNumber):
-        super().__init__(colour, cardType)
-        self.cardType = 'regular'
+    def __init__(self, colour, cardNumber):
+        super().__init__(colour)
+        self.type = 'regular'
         self.cardNumber = cardNumber
-    
-    def build(self, surface):
-        draw.rect(surface,self.colour,(100,300,100,300))
-    
-    #super().build(self, surface):
-    #^ not sure if inheritance can be done this way lol
 
 
-class PowerCards(Cards):
+class PowerCard(Card):
 
-    def __init__(self, colour, cardType, cardPower):
-        super().__init__(colour, cardType)
-        self.cardType = 'power'
+    def __init__(self, colour, cardPower):
+        super().__init__(colour)
+        self.type = 'power'
         self.cardPower = cardPower
 
 
-class WildCards(Cards):
+class WildCard(Card):
 
-    def __init__(self, cardType, colour, cardPower):
-        super().__init__(cardType, colour)
-        self.cardsType = 'wild'
+    def __init__(self, cardPower):
+        self.type = 'wild'
         self.colour = None 
         self.cardPower = cardPower
 
  
 #special cards made by us.
-class SpecialCards(Cards):
+class SpecialCard(Card):
     
-    def __init__(self, cardType, colour, cardPower, cardNumber):
-        super().__init__(colour, cardType)
-        self.cardType = 'special'
+    def __init__(self, colour, cardPower, cardNumber):
+        super().__init__(colour)
+        self.type = 'special'
         self.cardPower = cardPower
         self.cardNumber = cardNumber
         
