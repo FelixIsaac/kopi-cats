@@ -1,5 +1,5 @@
 import pygame, os, Cards
-from funcs import createMenu
+from funcs import createMenu, getMousePos, isClicked
 
 #additional vars
 #------------------------------#
@@ -60,19 +60,29 @@ def main():
 
         if gameMode == 0:
             #gameMode = 0 also is menu. 
-
+            btnWidth = 200
+            btnHeight = 75
+            btnCentred = (screenWidth/2) - (btnWidth/2)
+            btnOnY = (screenHeight/4) - (btnHeight/2)
+            #^ couldn't think of a better way to check if the button is clicked. :(
+                
+            cursorPos = getMousePos()
             createMenu(screenWidth, screenHeight, screen)
+            if isClicked(btnCentred, btnOnY, btnWidth, btnHeight, cursorPos):
+                gameMode = 1
+
             refresh()
 
         elif gameMode == 1:
             #for now, test site. 
-            cardWidth, cardHeight = 138, 200    
+            cardWidth, cardHeight = 138, 200 
+            centredX = screenWidth/2 - cardWidth/2
+            centredY = screenHeight/2 - cardHeight/2
 
             screen.fill(colours['blue'])
 
             testCard = Cards.RegularCard(colours['red'], 9)
-            testCard.build(screen, (screenWidth/2 - cardWidth/2), (screenHeight/2 - cardHeight/2), cardWidth, cardHeight)
-            #^ screenWidth/2 - cardWidth/2 is centre of screen on x-axis 
+            testCard.build(screen, centredX, centredY, cardWidth, cardHeight)
 
             refresh()       
 
