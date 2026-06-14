@@ -1,3 +1,8 @@
+> [!NOTE]
+> **📦 Archived — no longer maintained.**
+> A Python Uno clone built with 3 friends in mid-2021 — custom rules, fullscreen toggle, the works for a group project. It reached a playable state but was never meant to go further than that.
+> _Archived — kept as a record._
+
 # kopi-cats
 
 A project worked on by 4 friends
